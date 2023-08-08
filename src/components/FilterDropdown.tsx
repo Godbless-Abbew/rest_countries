@@ -1,22 +1,39 @@
+import React, { useEffect } from 'react';
+import '../styles/filterDropdown.css';
 
-import '../styles/filterDropdown.css'
-
-
-const FilterDropdown = () => {
-    return (
-        <div className="filter-dropdown">
-            <div className="filter-dropdown-menu">
-            <select>
-            <option value="all">Filter by Region</option>
-            <option value="africa">Africa</option>
-            <option value="america">America</option>
-            <option value="asia">Asia</option>
-            <option value="europe">Europe</option>
-            <option value="oceania">Oceania</option>
-            </select>
-            </div>
-        </div>
-     );
+interface FilterDropdownProps {
+  regionFilter: string;
+  setRegionFilter: React.Dispatch<React.SetStateAction<string>>;
 }
- 
+
+const FilterDropdown: React.FC<FilterDropdownProps> = ({ regionFilter, setRegionFilter }) => {
+  const handleFilterChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedRegion = e.target.value;
+    setRegionFilter(selectedRegion);
+    localStorage.setItem('regionFilter', selectedRegion);
+  };
+
+  useEffect(() => {
+    const savedRegionFilter = localStorage.getItem('regionFilter');
+    if (savedRegionFilter) {
+      setRegionFilter(savedRegionFilter);
+    }
+  }, [setRegionFilter]);
+
+  return (
+    <div className="filter-dropdown">
+      <div className="dropdown-container">
+        <select value={regionFilter} onChange={handleFilterChange}>
+          <option value="all" className='region'>Filter by region</option>
+          <option value="Africa">Africa</option>
+          <option value="Americas">Americas</option>
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europe</option>
+          <option value="Oceania">Oceania</option>
+        </select>
+      </div>
+    </div>
+  );
+}
+
 export default FilterDropdown;

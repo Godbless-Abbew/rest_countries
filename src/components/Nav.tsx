@@ -1,5 +1,6 @@
 import Toggles from "./Toggles";
 import '../styles/Nav.css'
+import '../styles/Toggle.css';
 
 const Nav = () => {
     return ( 
