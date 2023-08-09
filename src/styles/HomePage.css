@@ -2,4 +2,12 @@
 display: flex;
 justify-content: space-between;
 align-items: center;
+margin-top: 5rem;
+}
+
+@media only screen and (max-width: 420px) and (min-width: 305px){
+   .home-page{
+    flex-direction: column;
+    margin-top: 5rem;
+   } 
 }

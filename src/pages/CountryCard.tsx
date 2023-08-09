@@ -60,7 +60,7 @@ const CountryCard: React.FC = () => {
   return (
     <div className='country-card-link'>
       {isLoading ? (
-        <div className='loading'>Loading please wait...</div>
+        <div className='card-loading'>Loading...</div>
       ) : country && (
         <div className='country-container-element'>
           <Link to="/" className="back-button">

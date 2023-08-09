@@ -23,4 +23,16 @@ select{
     font-size: 14px;
     font-weight: 400;
 }
+.dark-background .filter-dropdown{
+    background: #2B3844;
+}
+.dark-background select{
+    background: #2B3844;
+    color: #fff;
+}
+@media only screen and (max-width: 420px) and (min-width: 305px){
+   .filter-dropdown{
+    margin-left: -3.2rem;
+   }
+}
 

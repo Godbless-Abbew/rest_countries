@@ -31,3 +31,25 @@ input:focus{
     color: #848484;
     position: relative;
 }
+.dark-background .searchInput{
+    background: #2B3844;
+    color: #fff;
+}
+.dark-background .search input{
+    background: #2B3844;
+    color: #fff;
+}
+.dark-background .search-icon{
+    color: #fff;
+}
+
+
+@media only screen and (max-width: 420px) and (min-width: 305px){
+    .searchInput{
+        width: 350px;
+    }
+    .search input{
+        width: 210px;
+    }
+   
+}

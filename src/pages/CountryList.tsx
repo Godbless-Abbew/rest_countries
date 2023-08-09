@@ -54,7 +54,7 @@ const CountryList: React.FC<CountriesProps> = ({ searchTerm, regionFilter }) => 
   return (
     <div className='country-card'>
       {isLoading ? (
-        <div className='loading'>Loading please wait...</div>
+        <div className='loading'>Loading...</div>
       ) : (
         filterCountries().map((country) => (
           <Link className='title-link' key={country.name} to={`/country/${country.name}`}>

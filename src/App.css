@@ -10,6 +10,7 @@ body{
     font-style: normal;
     width: 100%;
 }
-.dark .nav{
-    background: red;
+
+.dark-background{
+    background: #202C36;
 }
