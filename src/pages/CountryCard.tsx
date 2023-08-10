@@ -18,7 +18,6 @@ export interface Country {
   borders: string[];
 }
 
-
 const CountryCard: React.FC = () => {
   const [country, setCountry] = useState<Country | null>(null);
   const [borderCountries, setBorderCountries] = useState<Country[]>([]);
@@ -32,17 +31,13 @@ const CountryCard: React.FC = () => {
         const response = await axios.get<Country[]>('https://restcountries.com/v2/all');
         const countriesData = response.data;
         const selectedCountry = countriesData.find(c => c.name === countryName);
-    
+
         if (selectedCountry) {
           setCountry(selectedCountry);
           setIsLoading(false);
-    
-          // Fetch border countries' data
-          const borderCountriesData = selectedCountry.borders
-            .map(border => countriesData.find(c => c.name === border))
-            .filter((borderCountry): borderCountry is Country => borderCountry !== undefined);
-    
-          setBorderCountries(borderCountriesData);
+
+          const borderCountryData = await fetchBorderCountries(selectedCountry.borders);
+          setBorderCountries(borderCountryData);
         } else {
           setIsLoading(false);
           console.error('Country not found.');
@@ -52,10 +47,21 @@ const CountryCard: React.FC = () => {
         setIsLoading(false);
       }
     };
-    
 
     fetchCountryData();
   }, [countryName]);
+
+  const fetchBorderCountries = async (borderNames: string[]) => {
+    try {
+      const borderResponse = await axios.get<Country[]>(
+        `https://restcountries.com/v2/alpha?codes=${borderNames.join(',')}&fields=name`
+      );
+      return borderResponse.data;
+    } catch (error) {
+      console.error('Error fetching border countries:', error);
+      return [];
+    }
+  };
 
   return (
     <div className='country-card-link'>
@@ -107,20 +113,21 @@ const CountryCard: React.FC = () => {
                   </div>
                 </div>
                 <div className='border-countries'>
-                  <div>
-                    <strong>Border Countries:</strong>{" "}
-                    {borderCountries.length > 0 ? (
-                      borderCountries.map((borderCountry) => (
-                        <Link
-                          key={borderCountry.name}
-                          to={`/country/${borderCountry.name}`}
-                          className='border-country-link'>
-                          {borderCountry.name}
-                        </Link>
-                      ))
-                    ) : (
-                      "None"
-                    )}
+                  <div className='country-card-border'>
+                    <strong>Border Countries:</strong>
+                    <div className="border-list">
+                      {borderCountries.length > 0
+                        ? borderCountries.map((borderCountry) => (
+                            <Link
+                              key={borderCountry.name}
+                              to={`/country/${borderCountry.name}`}
+                              className="border-country-link"
+                            >
+                              {borderCountry.name}
+                            </Link>
+                          ))
+                        : "No border country found"}
+                    </div>
                   </div>
                 </div>
               </div>

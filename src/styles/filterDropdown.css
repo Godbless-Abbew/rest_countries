@@ -34,5 +34,8 @@ select{
    .filter-dropdown{
     margin-left: -3.2rem;
    }
+   select {
+    
+   }
 }
 

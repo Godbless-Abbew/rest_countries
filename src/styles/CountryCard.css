@@ -33,14 +33,12 @@
     display: flex;
     align-items: center;
     gap: 120.29px;
-    /* justify-content: space-around; */
-    width: 90%;
-    /* margin-top: 4rem; */
+    width: 91%;
 }
 
 .card-details-info{
     display: flex;
-    /* width: 50rem; */
+    gap: 117px;
     height: 25rem;
     margin-top: 2rem;
 }
@@ -48,11 +46,9 @@
     display: flex;
     flex-direction: column;
     align-items: left;
-    /* justify-content: center; */
     width: 50rem;
     height: 25rem;
     margin-top: 3rem;
-    /* background: rgb(160, 139, 139); */
 }
 .country-card-details{
     display: flex;
@@ -60,7 +56,7 @@
     align-items: left;
     gap: 1rem;
     width: 307px;
-    height: 180px;
+    height: 174px;
     color: #111517;
     font-size: 16px;
     font-weight: 300;
@@ -83,10 +79,6 @@
     align-items: left;
     font-weight: 800;
     font-size: 32px;
-    /* width: 25rem; */
-    /* height: 3rem; */
-    /* margin-top: 3rem; */
-    /* margin-right: 20rem; */
 }
 .country-card-element{
     display: flex;
@@ -96,13 +88,13 @@
 
 }
 .top-level-domain{
-    width: 300px;
-    height: 105px;
+    width: 250px;
+    height: 96px;
     color: #111517;
     font-size: 16px;
     font-weight: 300;
-    padding: 0.5rem;
-    margin: 0 auto;
+    margin-top: 1rem ;
+    /* margin: 0 auto; */
    line-height: 32px;
 }
 span{
@@ -131,6 +123,33 @@ span{
     animation: spin 1s ease-in-out infinite;
   }
 
+  .border-country-link {
+    display: inline-block;
+    /* width: 6rem; */
+    height: 1.75rem;
+    border-radius: 0.125rem;
+    border: 0px solid #979797;
+    background: #FFF;
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.10);
+    margin-right: 0.5rem; /* Add some spacing between links */
+    margin-bottom: 0.5rem; /* Add some spacing at the bottom */
+    padding: 0.25rem 0.5rem; /* Adjust padding as needed */
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+
+  }
+  .dark-background .country-card-border strong{
+    color: #fff;
+  }
+  .country-card-border{
+    display: flex;
+    gap: 1rem;
+  }
+.dark-background .border-country-link{
+    background: #2B3844;
+    color: #fff;
+}
 .dark-background .back-button{
     background: #2B3844;
     box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.29);
