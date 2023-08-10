@@ -1,0 +1,227 @@
+.country-card-link{
+    width: 100%;
+    margin-top: 7rem;
+}
+.country-container-element{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 48px 80px;
+}
+.back-button{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    width: 136px;
+    height: 40px;
+    text-decoration: none;
+    color: #111517;
+    border-radius: 6px;
+    background: #FFF;
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.29);
+}
+.back-button h1{
+    font-weight: 300;
+    font-size: 16px;
+}
+.arrow-left{
+    color: #111517;
+}
+
+.main-container{
+    display: flex;
+    align-items: center;
+    gap: 120.29px;
+    width: 91%;
+}
+
+.card-details-info{
+    display: flex;
+    gap: 117px;
+    height: 25rem;
+    margin-top: 2rem;
+}
+.country-info-container{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 50rem;
+    height: 25rem;
+    margin-top: 3rem;
+}
+.country-card-details{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 1rem;
+    width: 307px;
+    height: 174px;
+    color: #111517;
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 1rem;
+}
+.country-flags{
+    width: 100%;
+    height: 100%;
+}
+.country-flags img{
+    width: 659.715px;
+    height: 423.169px;
+    /* object-fit: cover; */
+    border-radius: .5rem;
+
+}
+.country-card-name{
+    display: flex;
+    justify-content: start;
+    align-items: left;
+    font-weight: 800;
+    font-size: 32px;
+}
+.country-card-element{
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    height: 30.188rem;
+
+}
+.top-level-domain{
+    width: 250px;
+    height: 96px;
+    color: #111517;
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 1rem ;
+    /* margin: 0 auto; */
+   line-height: 32px;
+}
+span{
+    color: #111517;
+    font-size: 16px;
+    font-weight: 600;
+}
+.card-loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 35rem;
+    font-size: 24px;
+    font-weight: 600;
+    width: 320px;
+   color: #111517;
+}
+.card-loading:after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 4px solid #ccc;
+    border-top-color: #333;
+    animation: spin 1s ease-in-out infinite;
+  }
+
+  .border-country-link {
+    display: inline-block;
+    /* width: 6rem; */
+    height: 1.75rem;
+    border-radius: 0.125rem;
+    border: 0px solid #979797;
+    background: #FFF;
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.10);
+    margin-right: 0.5rem; /* Add some spacing between links */
+    margin-bottom: 0.5rem; /* Add some spacing at the bottom */
+    padding: 0.25rem 0.5rem; /* Adjust padding as needed */
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+
+  }
+  .dark-background .country-card-border strong{
+    color: #fff;
+  }
+  .country-card-border{
+    display: flex;
+    gap: 1rem;
+  }
+.dark-background .border-country-link{
+    background: #2B3844;
+    color: #fff;
+}
+.dark-background .back-button{
+    background: #2B3844;
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.29);
+    color: #fff;
+}
+.dark-background .arrow-left{
+    color: #fff;
+}
+
+
+.dark-background .country-card-details{
+    color: #fff;
+}
+.dark-background .country-card-name{
+    color: #fff;
+}
+.dark-background .top-level-domain{
+    color: #fff;
+}
+.dark-background span{
+    color: #fff;
+}
+.dark-background .card-loading{
+    color: #fff;
+}
+
+@media only screen and (max-width: 420px) and (min-width: 305px) {
+    .country-card-link{
+        margin-left: -2rem;
+    }
+    .country-container-element{
+        display: block;
+        width: 295px;
+        margin-left: 4.5rem;
+    }
+    .country-flags img {
+        width: 295px;
+        height: 275.92px;
+    }
+    .country-flags {
+        width: 295px;
+        height: 275.92px;
+    }
+    .main-container{
+        display: block;
+        width: 295px;
+        margin-top: 2rem;
+    }
+    .country-card-details{
+        display: block;
+        height: 181px;
+        width: 295px;
+        gap: 2rem;
+        line-height: 32px;
+    }
+    .country-info-container{
+        width: 295px;
+    }
+    .country-card-element{
+        width: 295px;
+        /* flex-direction: row; */
+    }
+    .card-details-info{
+        display: block;
+        margin: 0;
+        /* width: 181px; */
+    }
+    .top-level-domain{
+        width: 295px;
+        padding: 0;
+    }
+    .card-loading{
+        margin-left: 3rem;
+    }
+}
