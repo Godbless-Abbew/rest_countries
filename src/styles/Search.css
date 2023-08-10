@@ -39,6 +39,9 @@ input:focus{
     background: #2B3844;
     color: #fff;
 }
+.dark-background ::placeholder {
+    color: #fff;
+}
 .dark-background .search-icon{
     color: #fff;
 }
