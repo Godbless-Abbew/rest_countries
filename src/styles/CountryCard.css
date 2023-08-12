@@ -175,6 +175,9 @@ span{
 .dark-background .card-loading{
     color: #fff;
 }
+.dark-background .border-list{
+    color: #fff;
+}
 
 @media only screen and (max-width: 420px) and (min-width: 305px) {
     .country-card-link{
