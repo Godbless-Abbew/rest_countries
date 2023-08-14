@@ -35,12 +35,12 @@ const FilterDropdown: React.FC<FilterDropdownProps> = ({
   return (
     <div className="filter-dropdown">
       <div
-        className={`filter-header ${isDropdownOpen ? "open" : ""}`}
+        className={`filter-header ${isDropdownOpen ? "open" : "close"}`}
         onClick={toggleDropdown}
       >
         <span>{regionFilter === "all" ? "Filter by Region" : regionFilter}</span>
         <span className="dropdown-icon">
-          {isDropdownOpen ? <FaAngleUp /> : <FaAngleDown/>}
+          {isDropdownOpen ? <FaAngleDown /> : <FaAngleUp/>}
         </span>
       </div>
       {isDropdownOpen && (
