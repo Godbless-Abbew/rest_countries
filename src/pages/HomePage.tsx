@@ -10,13 +10,13 @@ const HomePage = () => {
     const [searchTerm, setSearchTerm] = useState<string>('')
     const [regionFilter, setRegionFilter] = useState<string>('all')
     return ( 
-        <>
+        <div className="home-element">
         <div className="home-page">
         <Search value={searchTerm} onChange={setSearchTerm}/>
         <FilterDropdown regionFilter={regionFilter} setRegionFilter={setRegionFilter}/>
         </div>
         <CountryList searchTerm={searchTerm} regionFilter={regionFilter}/>
-        </>
+        </div>
     );
 }
  
