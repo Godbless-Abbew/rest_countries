@@ -25,8 +25,13 @@
         
     }
     .mode-text{
-    font-size: 12px;
-    font-weight: 400;
-   }
+        font-size: 12px;
+        font-weight: 400;
+    }
+    /* .dark-mode{
+        margin-left: 12rem;
+        width: 12rem;
+        height: 1rem;
+   } */
 
 }
