@@ -139,8 +139,8 @@ span{
     text-align: center;
     text-decoration: none;
     color: #000;
-
   }
+  
   .dark-background .country-card-border strong{
     color: #fff;
   }
@@ -187,12 +187,11 @@ span{
 
 @media only screen and (max-width: 420px) and (min-width: 305px) {
     .country-card-link{
-        margin-left: -2rem;
+        margin-left: -2.2rem;
     }
     .country-container-element{
         display: block;
         width: 295px;
-        margin-left: 4.5rem;
     }
     .country-flags img {
         width: 295px;
@@ -216,15 +215,15 @@ span{
     }
     .country-info-container{
         width: 295px;
+        height: 1%;
     }
     .country-card-element{
         width: 295px;
-        /* flex-direction: row; */
+        height: 1%;
     }
     .card-details-info{
         display: block;
         margin: 0;
-        /* width: 181px; */
     }
     .top-level-domain{
         width: 295px;
@@ -232,5 +231,9 @@ span{
     }
     .card-loading{
         margin-left: 3rem;
+    }
+
+    .country-card-border{
+        flex-direction: column;
     }
 }
