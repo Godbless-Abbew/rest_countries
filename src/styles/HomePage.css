@@ -9,7 +9,6 @@ position: relative;
 height: 56px;
 justify-content: space-between;
 margin:48px 80px 48px 80px; 
-z-index: -1;
 }
 
 @media only screen and (max-width: 420px) and (min-width: 305px){
